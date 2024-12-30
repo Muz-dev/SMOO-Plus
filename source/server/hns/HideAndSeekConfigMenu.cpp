@@ -17,6 +17,14 @@ const sead::WFixedSafeString<0x200> *HideAndSeekConfigMenu::getStringData() {
 
     gamemodeConfigOptions->mBuffer[0].copy(u"Toggle H&S Gravity On");
     gamemodeConfigOptions->mBuffer[1].copy(u"Toggle H&S Gravity Off");
+    gamemodeConfigOptions->mBuffer[1].copy(u"Toggle Player Collision On");
+    gamemodeConfigOptions->mBuffer[2].copy(u"Toggle Player Collision Off");
+    gamemodeConfigOptions->mBuffer[3].copy(u"Toggle Player Bounce Off");
+    gamemodeConfigOptions->mBuffer[4].copy(u"Toggle Player Bounce On");
+    gamemodeConfigOptions->mBuffer[5].copy(u"Toggle Cappy Bounce Off");
+    gamemodeConfigOptions->mBuffer[6].copy(u"Toggle Cappy Bounce On");
+    gamemodeConfigOptions->mBuffer[7].copy(u"Toggle Cappy Collision Off");
+    gamemodeConfigOptions->mBuffer[8].copy(u"Toggle Cappy Collision On");
 
     return gamemodeConfigOptions->mBuffer;
 }
@@ -45,6 +53,49 @@ bool HideAndSeekConfigMenu::updateMenu(int selectIndex) {
             }
             return true;
         }
+        case 2: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 3: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 4: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 5: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 6: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 7: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        case 8: {
+            if (GameModeManager::instance()->isMode(GameMode::HIDEANDSEEK)) {
+                curMode->mIsUseGravity = false;
+            }
+            return true;
+        }
+        
         default:
             Logger::log("Failed to interpret Index!\n");
             return false;
