@@ -15,5 +15,5 @@ public:
     const int getMenuSize() override { return mItemCount; }
 
 private:
-    static constexpr int mItemCount = 8;
+    static constexpr int mItemCount = 9;
 };

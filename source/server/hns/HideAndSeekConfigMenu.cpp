@@ -95,7 +95,6 @@ bool HideAndSeekConfigMenu::updateMenu(int selectIndex) {
             }
             return true;
         }
-        
         default:
             Logger::log("Failed to interpret Index!\n");
             return false;
